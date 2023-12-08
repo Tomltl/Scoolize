@@ -659,7 +659,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    JPO: Attribute.Boolean;
     INE: Attribute.String &
       Attribute.Required &
       Attribute.Unique &

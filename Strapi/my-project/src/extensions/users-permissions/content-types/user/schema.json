@@ -65,9 +65,6 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "JPO": {
-      "type": "boolean"
-    },
     "INE": {
       "type": "string",
       "required": true,
