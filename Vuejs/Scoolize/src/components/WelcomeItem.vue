@@ -9,6 +9,13 @@
       </h3>
       <slot></slot>
     </div>
+    export default {
+  data() {
+    return {
+      showMenu: false,
+    };
+  },
+};
   </div>
 </template>
 

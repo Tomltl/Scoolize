@@ -1,34 +1,37 @@
 <template>
-    <div class="font-display">
-      <link href="https://fonts.cdnfonts.com/css/tt-commons" rel="stylesheet">
       <Navbar />
       <section>
-        <div class="flex flex-col items-center px-6 md:pt-48 pt-48 mx-auto">
-          <div class="w-full bg-white border border-blue-300 rounded-lg shadow-lg dark:border md:mt-0 sm:max-w-md xl:p-0">
-            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-                Login Here
-              </h1>
-              <form class="space-y-4 md:space-y-6" action="#">
+        <div class="flex flex-col items-center mx-auto mt-32">
+          <div class="bg-white rounded-xl shadow-lg dark:border md:mt-0 w-3/6 xl:p-0 h-[500px] lg:w-11/12 lg:mx-10 text-center" id="login">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8 flex items-center justify-center mt-12">
+              <form class="space-y-4 md:space-y-6 w-96 text-center" action="#">
+                <router-link to="/loginproffesseur">
+                <p class="flex justify-center font-medium"><img src="../assets/gradu.svg" alt="" class="mr-2">Etablissement</p>
+                </router-link>
+                <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
+                  Connexion
+                </h1>
                 <div>
-                  <label for="identifier" class="block mb-2 text-sm font-medium text-gray-900">Username or email</label>
-                  <input v-model="user.identifier" type="text" name="identifier" id="identifier" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Username or email" required="">
+                  <input v-model="user.identifier" type="text" name="identifier" id="identifier" class="bg-gray-50 border border-black text-gray-900 sm:text-sm rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-60 p-2.5 mx-auto" placeholder="N° de dossier" required="">
                 </div>
-                <div> 
-                  <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
-                  <input v-model="user.password" type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+                <div>
+                  <input v-model="user.password" type="password" name="password" id="password" placeholder="Mot de passe" class="bg-gray-50 border border-black text-gray-900 sm:text-sm rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-60 p-2.5 mx-auto" required="">
                 </div>
-                <button @click="tryLogin" type="button" class="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login</button>
+                <div class="flex justify-center">
+                <img src="../assets/key.svg" alt="" class="mr-2">
+                <p class="text-sm font-light hover:underline hover:cursor-pointer">N° de dossier ou mot de passe oublié ?</p>
+              </div>
+                <button @click="tryLogin" type="button" class="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none w-60 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login</button>
                 <p id="error" class="text-red-600"></p>
-                <p class="text-sm font-light text-gray-500">
-                  Don't have an account? <router-link to="/register" class="font-medium text-primary-600 hover:underline ">Register here</router-link>
+                <p class="text-sm font-light">
+                  Je ne suis pas inscrit, <router-link to="/register" class=" text-[#F34414] text-primary-600 hover:underline ">m'inscrire</router-link>
                 </p>
               </form>
+              <img src="../assets/Connexion 1.svg" alt="" class="lg:w-0" id="image">
             </div>
           </div>
         </div>
       </section>
-    </div>
   </template>
   
   <script>
@@ -68,6 +71,8 @@
   </script>
   
   <style>
-    /* Ajoutez vos styles CSS ici */
+    #login{
+      border-right: 15px solid #263238;
+    }
   </style>
   
