@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ecoles",
+  "info": {
+    "singularName": "ecole",
+    "pluralName": "ecoles",
+    "displayName": "Ecole"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
