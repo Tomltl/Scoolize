@@ -368,12 +368,14 @@ export interface ApiEcoleEcole extends Schema.CollectionType {
     singularName: 'ecole';
     pluralName: 'ecoles';
     displayName: 'Ecole';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Nom: Attribute.String & Attribute.Required & Attribute.Unique;
+    capacites: Attribute.BigInteger & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -689,15 +691,12 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-<<<<<<< HEAD
-=======
     INE: Attribute.String &
       Attribute.Required &
       Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 11;
       }>;
->>>>>>> b8d557103a36c81fe661c26247e0b71ffd6ecab7
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

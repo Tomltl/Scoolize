@@ -4,7 +4,8 @@
   "info": {
     "singularName": "ecole",
     "pluralName": "ecoles",
-    "displayName": "Ecole"
+    "displayName": "Ecole",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,10 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "capacites": {
+      "required": true,
+      "type": "biginteger"
     }
   }
 }
