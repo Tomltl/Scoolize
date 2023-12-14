@@ -1,0 +1,178 @@
+{
+  "kind": "collectionType",
+  "collectionName": "formations",
+  "info": {
+    "singularName": "formation",
+    "pluralName": "formations",
+    "displayName": "Formation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "session": {
+      "type": "string"
+    },
+    "contrat_etab": {
+      "type": "string"
+    },
+    "cod_uai": {
+      "type": "string"
+    },
+    "g_ea_lib_vx": {
+      "type": "string"
+    },
+    "dep": {
+      "type": "string"
+    },
+    "dep_lib": {
+      "type": "string"
+    },
+    "region_etab_aff": {
+      "type": "string"
+    },
+    "lib_for_voe_ins": {
+      "type": "string"
+    },
+    "select_form": {
+      "type": "string"
+    },
+    "fili": {
+      "type": "string"
+    },
+    "lib_comp_voe_ins": {
+      "type": "text"
+    },
+    "form_lib_voe_acc": {
+      "type": "text"
+    },
+    "fil_lib_voe_acc": {
+      "type": "text"
+    },
+    "detail_forma": {
+      "type": "string"
+    },
+    "g_olocalisation_des_formations": {
+      "type": "json"
+    },
+    "capa_fin": {
+      "type": "integer"
+    },
+    "voe_tot": {
+      "type": "integer"
+    },
+    "nb_voe_pp": {
+      "type": "integer"
+    },
+    "nb_voe_pp_internat": {
+      "type": "integer"
+    },
+    "nb_voe_pp_bg": {
+      "type": "integer"
+    },
+    "nb_voe_pp_bg_brs": {
+      "type": "integer"
+    },
+    "nb_voe_pp_bt": {
+      "type": "integer"
+    },
+    "nb_voe_pp_bp": {
+      "type": "integer"
+    },
+    "nb_voe_pp_bp_brs": {
+      "type": "integer"
+    },
+    "nb_voe_pp_at": {
+      "type": "integer"
+    },
+    "pct_acc_debutpp": {
+      "type": "integer"
+    },
+    "pct_acc_datebac": {
+      "type": "integer"
+    },
+    "pct_acc_finpp": {
+      "type": "integer"
+    },
+    "pct_f": {
+      "type": "integer"
+    },
+    "pct_aca_orig_idf": {
+      "type": "integer"
+    },
+    "pct_etab_orig": {
+      "type": "integer"
+    },
+    "pct_bours": {
+      "type": "integer"
+    },
+    "pct_neobac": {
+      "type": "integer"
+    },
+    "pct_mention_nonrenseignee": {
+      "type": "integer"
+    },
+    "pct_sansmention": {
+      "type": "integer"
+    },
+    "pct_ab": {
+      "type": "integer"
+    },
+    "pct_b": {
+      "type": "integer"
+    },
+    "pct_tb": {
+      "type": "integer"
+    },
+    "pct_tbf": {
+      "type": "integer"
+    },
+    "pct_bg": {
+      "type": "integer"
+    },
+    "pct_bg_mention": {
+      "type": "integer"
+    },
+    "pct_bt": {
+      "type": "integer"
+    },
+    "pct_bt_mention": {
+      "type": "integer"
+    },
+    "prop_tot_bg": {
+      "type": "integer"
+    },
+    "prop_tot_bg_brs": {
+      "type": "integer"
+    },
+    "prop_tot_bt": {
+      "type": "integer"
+    },
+    "prop_tot_bt_brs": {
+      "type": "integer"
+    },
+    "prop_tot_bp": {
+      "type": "integer"
+    },
+    "ran_grp1": {
+      "type": "integer"
+    },
+    "lien_form_psup": {
+      "type": "string"
+    },
+    "taux_acces_ens": {
+      "type": "text"
+    },
+    "part_acces_gen": {
+      "type": "integer"
+    },
+    "part_acces_tec": {
+      "type": "integer"
+    },
+    "part_acces_pro": {
+      "type": "integer"
+    }
+  }
+}

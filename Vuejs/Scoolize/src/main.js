@@ -9,6 +9,8 @@ import Footer from './components/Footer.vue'
 import App from './App.vue'
 import router from './router'
 
+import "leaflet"
+
 const app = createApp(App)
 
 app.use(createPinia())

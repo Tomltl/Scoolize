@@ -394,6 +394,89 @@ export interface ApiEcoleEcole extends Schema.CollectionType {
   };
 }
 
+export interface ApiFormationFormation extends Schema.CollectionType {
+  collectionName: 'formations';
+  info: {
+    singularName: 'formation';
+    pluralName: 'formations';
+    displayName: 'Formation';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    session: Attribute.String;
+    contrat_etab: Attribute.String;
+    cod_uai: Attribute.String;
+    g_ea_lib_vx: Attribute.String;
+    dep: Attribute.String;
+    dep_lib: Attribute.String;
+    region_etab_aff: Attribute.String;
+    lib_for_voe_ins: Attribute.String;
+    select_form: Attribute.String;
+    fili: Attribute.String;
+    lib_comp_voe_ins: Attribute.Text;
+    form_lib_voe_acc: Attribute.Text;
+    fil_lib_voe_acc: Attribute.Text;
+    detail_forma: Attribute.String;
+    g_olocalisation_des_formations: Attribute.JSON;
+    capa_fin: Attribute.Integer;
+    voe_tot: Attribute.Integer;
+    nb_voe_pp: Attribute.Integer;
+    nb_voe_pp_internat: Attribute.Integer;
+    nb_voe_pp_bg: Attribute.Integer;
+    nb_voe_pp_bg_brs: Attribute.Integer;
+    nb_voe_pp_bt: Attribute.Integer;
+    nb_voe_pp_bp: Attribute.Integer;
+    nb_voe_pp_bp_brs: Attribute.Integer;
+    nb_voe_pp_at: Attribute.Integer;
+    pct_acc_debutpp: Attribute.Integer;
+    pct_acc_datebac: Attribute.Integer;
+    pct_acc_finpp: Attribute.Integer;
+    pct_f: Attribute.Integer;
+    pct_aca_orig_idf: Attribute.Integer;
+    pct_etab_orig: Attribute.Integer;
+    pct_bours: Attribute.Integer;
+    pct_neobac: Attribute.Integer;
+    pct_mention_nonrenseignee: Attribute.Integer;
+    pct_sansmention: Attribute.Integer;
+    pct_ab: Attribute.Integer;
+    pct_b: Attribute.Integer;
+    pct_tb: Attribute.Integer;
+    pct_tbf: Attribute.Integer;
+    pct_bg: Attribute.Integer;
+    pct_bg_mention: Attribute.Integer;
+    pct_bt: Attribute.Integer;
+    pct_bt_mention: Attribute.Integer;
+    prop_tot_bg: Attribute.Integer;
+    prop_tot_bg_brs: Attribute.Integer;
+    prop_tot_bt: Attribute.Integer;
+    prop_tot_bt_brs: Attribute.Integer;
+    prop_tot_bp: Attribute.Integer;
+    ran_grp1: Attribute.Integer;
+    lien_form_psup: Attribute.String;
+    taux_acces_ens: Attribute.Text;
+    part_acces_gen: Attribute.Integer;
+    part_acces_tec: Attribute.Integer;
+    part_acces_pro: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::formation.formation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::formation.formation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -725,6 +808,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::ecole.ecole': ApiEcoleEcole;
+      'api::formation.formation': ApiFormationFormation;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
