@@ -20,7 +20,7 @@ export default {
             map: null,
             markers: L.markerClusterGroup(),
             currentPage: 1,
-            itemsPerPage: 100,
+            itemsPerPage: 14000,
             totalItems: 0,
             loadedFormationsCount: 0,
         };
@@ -37,7 +37,6 @@ export default {
                 .then(response => response.json())
                 .then(data => {
                     console.log(data.data);
-                    console.log(typeof data)
                     data.data.forEach(formation => {
                         const marker = L.marker(this.getLatLng(formation)).bindPopup(this.getPopupContent(formation));
                         this.markers.addLayer(marker);
@@ -47,10 +46,11 @@ export default {
                     this.map.addLayer(this.markers);
 
                     // Vérifiez si toutes les données ont été récupérées
-                    if (data.length < this.itemsPerPage) {
+                    if (data.data.length < this.itemsPerPage) {
                         console.log('Toutes les données ont été récupérées.');
                     } else {
                         // Si ce n'est pas le cas, incrémentez la page et effectuez une nouvelle demande
+                        console.log(data.data.length);
                         this.currentPage++;
                         this.fetchData();
                     }
