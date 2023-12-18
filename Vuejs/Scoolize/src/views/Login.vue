@@ -1,7 +1,7 @@
 <template>
       <Navbar />
       <section>
-        <div class="flex flex-col items-center mx-auto mt-32">
+        <div class="flex flex-col items-center mx-auto" id="form">
           <div class="bg-white rounded-xl shadow-lg dark:border md:mt-0 w-3/6 xl:p-0 h-[500px] lg:w-11/12 lg:mx-10 text-center" id="login">
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8 flex items-center justify-center mt-12">
               <form class="space-y-4 md:space-y-6 w-96 text-center" action="#">
@@ -74,5 +74,10 @@
     #login{
       border-right: 15px solid #263238;
     }
+
+    #form{
+      margin-top: 7.5%;
+    }
+
   </style>
   
