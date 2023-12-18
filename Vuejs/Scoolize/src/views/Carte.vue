@@ -1,9 +1,9 @@
 <template>
-  <Navbar/>
-  <div class="flex">
+  <Navbar />
+  <section class="flex">
     <!-- Colonne de filtres -->
-    <div class="w-1/4 p-4">
-      <h1>Filtres</h1>
+    <section class="w-1/4 p-4">
+      <h1 class="font-bold text-2xl  " >Filtres</h1>
       <!-- Catégorie : Types d'établissement -->
       <div class="mb-4">
         <div class="flex items-center justify-between cursor-pointer" @click="toggleCategory('typesEtablissement')">
@@ -69,10 +69,10 @@
           <!-- Ajoutez d'autres filtres... -->
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Carte avec les marqueurs -->
-    <div class="w-3/4 flex">
+    <section class="w-3/4 flex">
       <!-- Contenu de votre carte avec les marqueurs... -->
       <div id="map-container" class="w-2/4 p-4">
         <div id="map"></div>
@@ -80,28 +80,43 @@
       <div class="w-2/4 p-4">
         <div v-if="selectedMarker">
           <div class="border-2 border-solid border-[#F34414] rounded-2xl p-4">
-            <h2 class="text-lg font-semibold">{{ selectedMarker.contrat_etab }}</h2>
-            <p>{{ selectedMarker.g_ea_lib_vx }}</p>
-            <p>{{ selectedMarker.dep_lib }}</p>
-            <p>{{ selectedMarker.dep }}</p>
-            <p>{{ selectedMarker.lib_for_voe_ins }}</p>
-            <p>Nombre de places disponibles : {{ selectedMarker.capa_fin }}</p>
-            <p>Taux d'accès : {{ selectedMarker.taux_acces_ens }}%</p>
+            <p class="uppercase bg-[#FCD0C4] text-[#DD3000] text-sm font-medium rounded-full px-2 py-1 w-fit ">{{
+              selectedMarker.contrat_etab }}</p>
+            <p class="text-2xl ">{{ selectedMarker.g_ea_lib_vx }}</p>
+            <div class="flex">
+              <p>{{ selectedMarker.dep_lib }}</p>
+              <p> &nbsp;({{ selectedMarker.dep }})</p>
+            </div>
+            <p class="text-2xl font-medium">{{ selectedMarker.lib_for_voe_ins }}</p>
+            <div class="flex flex-wrap justify-around mt-2">
+              <p class="bg-[#FCD0C4] text-[#DD3000] text-sm font-medium rounded-full px-3 pt-1 pb-1.5 w-fit ">Nombre de
+                places
+                disponibles : {{ selectedMarker.capa_fin }}</p>
+              <p class="bg-[#FCD0C4] text-[#DD3000] text-sm font-medium rounded-full px-3 pt-1 pb-1.5 w-fit ">Taux d'accès
+                : {{
+                  selectedMarker.taux_acces_ens }}%</p>
+            </div>
 
             <hr class="my-4">
 
             <h3 class="text-md font-semibold">Détails personnalisés :</h3>
-            <p>Nombre de voeux formulés en 2023 : {{ selectedMarker.voe_tot }}</p>
-            <p>Part des terminales technologiques en position de recevoir une proposition en phase principale : {{
-              selectedMarker.part_acces_tec }}%</p>
+            <div class="flex flex-wrap justify-around mt-2 space-y-5 ">
+              <p class="bg-[#FCD0C4] text-[#DD3000] text-sm font-medium rounded-full px-3 pt-1 pb-1.5 w-fit ">Nombre de
+                voeux
+                formulés en 2023 : {{ selectedMarker.voe_tot }}</p>
+              <p class="bg-[#FCD0C4] text-[#DD3000] text-sm font-medium rounded-full px-3 pt-1 pb-1.5 w-fit ">Part des
+                terminales
+                technologiques en position de recevoir une proposition en phase principale : {{
+                  selectedMarker.part_acces_tec }}%</p>
+            </div>
 
-            <button @click="viewFormationDetails" class="mt-4 bg-F34414 text-white px-4 py-2 rounded-full">Voir la
+            <button @click="viewFormationDetails" class="bg-[#F34414] mt-4 text-white px-4 py-2 rounded-md">Voir la
               formation</button>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </section>
 </template>
   
 <script>
@@ -117,7 +132,7 @@ export default {
       map: null,
       markers: L.markerClusterGroup(),
       currentPage: 1,
-      itemsPerPage: 100,
+      itemsPerPage: 14000,
       totalItems: 0,
       loadedFormationsCount: 0,
       selectedMarker: null,
@@ -188,8 +203,8 @@ export default {
 #map-container {
   height: 550px;
 }
+
 #map {
   height: 100%;
-}
-</style>
+}</style>
   
