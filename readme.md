@@ -3,7 +3,8 @@
 Ce README vous guide à travers les étapes pour lancer et utiliser le projet Scoolize qui intègre Vue 3 et Strapi.
 
 ## Objectif du projet
-Le projet Scoolize vise à fournir une plateforme pour visualiser des données éducatives via une carte interactive et une API robuste.
+Un aspect du projet Scoolize vise à fournir une plateforme contenant un outil de visualisation des formations via une carte interactive et une API robuste.
+Cette démo vise à montrer que nous pouvons techniquement réaliser une telle plateforme en utilisant des technologies modernes et open-source. (VueJS, Strapi, API de Parcoursup, Leaflet)
 
 ## Clonage du projet
 Pour cloner le projet, vous pouvez utiliser l'une des méthodes suivantes :

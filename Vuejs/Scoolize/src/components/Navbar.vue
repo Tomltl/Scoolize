@@ -57,9 +57,9 @@
           <li class="text-sm font-bold text-gray-800 hover:text-blue-400">
             Contact
           </li>
-          <a href="/register">
+          <a href="/carte">
           <li class="text-sm font-bold text-gray-800 hover:text-blue-400">
-            Créer mon compte
+            Rechercher une formation
           </li>
           </a>
           <a href="/login">
